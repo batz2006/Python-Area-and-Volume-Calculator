@@ -69,6 +69,24 @@ def octahedron():
     a = float(input("Please enter edge: "))
     volume = ((2**0.5)/(3)) * a**3
     print(f"Volume of the octahedron is {volume}.")
+    
+def circleAndSphere():
+    r = float(input("Please enter radius: "))
+    v = (4/3)*(pi)*(r**3)
+    a = pi * (r**2)
+    print(f"The area of the circle is {a} and the volume of the sphere is {v}.")
+
+def hexagon():
+    decision = input("Please tell what action you would like to take: \narea(for hexagon)\nvolume(for hexagonal prism)\n")
+    if decision.lower() == 'area':
+        a = float(input("Please enter side length: "))
+        area = ((3*(3**0.5))/2) * (a**2)
+        print(f"The area of the hexagon is {area}.")
+    elif decision.lower() == 'volume':
+        a  =float(input("Please enter base edge: "))
+        h = float(input("Please enter height: "))
+        v = ((3*(3**0.5))/2)*(a**2)*(h)
+        print(f"The volume of the hexagonal prism is {v}.")
 
 print("Welcome to math.py! Please choose one of the following options to get started.")
 print("cylinder")
@@ -94,3 +112,7 @@ elif o.lower() == 'icosahedron':
     icosahedron()
 elif o.lower() == 'octahedron':
     octahedron()
+elif o.lower() == "circleAndSphere":
+    circleAndSphere()
+elif o.lower() == "hexagon":
+    hexagon()
